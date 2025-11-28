@@ -184,7 +184,7 @@ void print(void* handle, ::ros::console::Level level, const char* str, const cha
   log4cxx::Logger* logger  = (log4cxx::Logger*)handle;
   try
   {
-    logger->forcedLog(g_level_lookup[level], str, log4cxx::spi::LocationInfo(file, function, line));
+    logger->forcedLog(g_level_lookup[level], str, log4cxx::spi::LocationInfo(file, "", function, line));
   }
   catch (std::exception& e)
   {
